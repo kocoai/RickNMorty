@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,13 @@
 		9D5DB7B025BF662900D0F463 /* Inspi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D5DB7AE25BF662900D0F463 /* Inspi.xcdatamodeld */; };
 		9D5DB7BB25BF662900D0F463 /* InspiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5DB7BA25BF662900D0F463 /* InspiTests.swift */; };
 		9D5DB7C625BF662900D0F463 /* InspiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5DB7C525BF662900D0F463 /* InspiUITests.swift */; };
+		9D5DB7DA25BF66A500D0F463 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5DB7D925BF66A500D0F463 /* Network.swift */; };
+		9D5DB7F725BF67F700D0F463 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5DB7F525BF67F700D0F463 /* CharactersView.swift */; };
+		9D5DB7FE25BF680600D0F463 /* EpisodesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5DB7FC25BF680600D0F463 /* EpisodesViewModel.swift */; };
+		9D5DB7FF25BF680600D0F463 /* EpisodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5DB7FD25BF680600D0F463 /* EpisodesView.swift */; };
+		9DCF79BE25BF7D0700518621 /* RickAndMortyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCF79BD25BF7D0700518621 /* RickAndMortyService.swift */; };
+		9DCF79D225BF8EA200518621 /* CharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCF79D125BF8EA200518621 /* CharactersViewModel.swift */; };
+		9DCF79D825C01BF000518621 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9DCF79D725C01BF000518621 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,12 @@
 		9D5DB7C125BF662900D0F463 /* InspiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InspiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D5DB7C525BF662900D0F463 /* InspiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspiUITests.swift; sourceTree = "<group>"; };
 		9D5DB7C725BF662900D0F463 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D5DB7D925BF66A500D0F463 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		9D5DB7F525BF67F700D0F463 /* CharactersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
+		9D5DB7FC25BF680600D0F463 /* EpisodesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodesViewModel.swift; sourceTree = "<group>"; };
+		9D5DB7FD25BF680600D0F463 /* EpisodesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodesView.swift; sourceTree = "<group>"; };
+		9DCF79BD25BF7D0700518621 /* RickAndMortyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyService.swift; sourceTree = "<group>"; };
+		9DCF79D125BF8EA200518621 /* CharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DCF79D825C01BF000518621 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,12 +113,11 @@
 		9D5DB7A225BF662800D0F463 /* Inspi */ = {
 			isa = PBXGroup;
 			children = (
-				9D5DB7A325BF662800D0F463 /* InspiApp.swift */,
-				9D5DB7A525BF662800D0F463 /* ContentView.swift */,
-				9D5DB7A725BF662900D0F463 /* Assets.xcassets */,
-				9D5DB7AC25BF662900D0F463 /* Persistence.swift */,
-				9D5DB7B125BF662900D0F463 /* Info.plist */,
-				9D5DB7AE25BF662900D0F463 /* Inspi.xcdatamodeld */,
+				9D5DB7F225BF67C900D0F463 /* Scene */,
+				9D5DB7E625BF66C500D0F463 /* Service */,
+				9D5DB7D825BF668C00D0F463 /* Framework */,
+				9D5DB7D725BF665F00D0F463 /* Model */,
+				9D5DB7D625BF664F00D0F463 /* Foundation */,
 				9D5DB7A925BF662900D0F463 /* Preview Content */,
 			);
 			path = Inspi;
@@ -136,6 +149,69 @@
 			path = InspiUITests;
 			sourceTree = "<group>";
 		};
+		9D5DB7D625BF664F00D0F463 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				9D5DB7B125BF662900D0F463 /* Info.plist */,
+				9D5DB7A325BF662800D0F463 /* InspiApp.swift */,
+				9D5DB7A525BF662800D0F463 /* ContentView.swift */,
+				9D5DB7A725BF662900D0F463 /* Assets.xcassets */,
+				9D5DB7AC25BF662900D0F463 /* Persistence.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		9D5DB7D725BF665F00D0F463 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9D5DB7AE25BF662900D0F463 /* Inspi.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9D5DB7D825BF668C00D0F463 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				9D5DB7D925BF66A500D0F463 /* Network.swift */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		9D5DB7E625BF66C500D0F463 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9DCF79BD25BF7D0700518621 /* RickAndMortyService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		9D5DB7F225BF67C900D0F463 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				9D5DB7F425BF67DB00D0F463 /* Detail */,
+				9D5DB7F325BF67D500D0F463 /* Categories */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		9D5DB7F325BF67D500D0F463 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				9D5DB7FD25BF680600D0F463 /* EpisodesView.swift */,
+				9D5DB7FC25BF680600D0F463 /* EpisodesViewModel.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		9D5DB7F425BF67DB00D0F463 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				9D5DB7F525BF67F700D0F463 /* CharactersView.swift */,
+				9DCF79D125BF8EA200518621 /* CharactersViewModel.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +228,9 @@
 			dependencies = (
 			);
 			name = Inspi;
+			packageProductDependencies = (
+				9DCF79D725C01BF000518621 /* Kingfisher */,
+			);
 			productName = Inspi;
 			productReference = 9D5DB7A025BF662800D0F463 /* Inspi.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +302,9 @@
 				Base,
 			);
 			mainGroup = 9D5DB79725BF662800D0F463;
+			packageReferences = (
+				9DCF79D625C01BF000518621 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 9D5DB7A125BF662800D0F463 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -265,9 +347,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D5DB7DA25BF66A500D0F463 /* Network.swift in Sources */,
+				9D5DB7F725BF67F700D0F463 /* CharactersView.swift in Sources */,
 				9D5DB7AD25BF662900D0F463 /* Persistence.swift in Sources */,
 				9D5DB7B025BF662900D0F463 /* Inspi.xcdatamodeld in Sources */,
+				9DCF79D225BF8EA200518621 /* CharactersViewModel.swift in Sources */,
 				9D5DB7A625BF662800D0F463 /* ContentView.swift in Sources */,
+				9D5DB7FE25BF680600D0F463 /* EpisodesViewModel.swift in Sources */,
+				9D5DB7FF25BF680600D0F463 /* EpisodesView.swift in Sources */,
+				9DCF79BE25BF7D0700518621 /* RickAndMortyService.swift in Sources */,
 				9D5DB7A425BF662800D0F463 /* InspiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,7 +517,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Inspi/Preview Content\"";
 				DEVELOPMENT_TEAM = 6675NKW34G;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Inspi/Info.plist;
+				INFOPLIST_FILE = Inspi/Foundation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -451,7 +539,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Inspi/Preview Content\"";
 				DEVELOPMENT_TEAM = 6675NKW34G;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = Inspi/Info.plist;
+				INFOPLIST_FILE = Inspi/Foundation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -588,6 +676,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9DCF79D625C01BF000518621 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9DCF79D725C01BF000518621 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DCF79D625C01BF000518621 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		9D5DB7AE25BF662900D0F463 /* Inspi.xcdatamodeld */ = {
