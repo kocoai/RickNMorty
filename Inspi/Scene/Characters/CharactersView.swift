@@ -9,7 +9,7 @@ import SwiftUI
 import Kingfisher
 
 struct CharactersView: View {
-    @ObservedObject var episode: EpisodeCell.ViewModel
+    @ObservedObject var episode: EpisodeCellViewModel
     
     var body: some View {
         ScrollView(showsIndicators: false) {
@@ -52,6 +52,6 @@ struct CharacterCell: View {
 
 struct CharactersView_Previews: PreviewProvider {
     static var previews: some View {
-        CharactersView(episode: EpisodeCell.ViewModel(RickAndMortyService.EpisodeResponse.Episode(id: 1, name: "", characters: [], airDate: "")))
+        CharactersView(episode: EpisodeCellViewModel(RickAndMortyService.EpisodeResponse.Episode(id: 1, name: "", characters: [], airDate: "")))
     }
 }

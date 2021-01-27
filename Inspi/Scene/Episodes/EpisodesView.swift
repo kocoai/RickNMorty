@@ -29,7 +29,7 @@ struct EpisodesView: View {
 }
 
 struct EpisodeCell: View {
-    @ObservedObject var viewModel: EpisodeCell.ViewModel
+    @ObservedObject var viewModel: EpisodeCellViewModel
     
     var body: some View {
         NavigationLink(destination: CharactersView(episode: viewModel)) {

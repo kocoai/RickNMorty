@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D2F567925C176CF00C9AAC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D2F567825C176CF00C9AAC9 /* Assets.xcassets */; };
+		9D2F568025C176CF00C9AAC9 /* Inspi Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9D2F567F25C176CF00C9AAC9 /* Inspi Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9D2F569725C176D000C9AAC9 /* Inspi Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 9D2F567625C176CD00C9AAC9 /* Inspi Watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9D2F56AB25C1779300C9AAC9 /* InspiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F56A525C1779300C9AAC9 /* InspiApp.swift */; };
+		9D2F56AC25C1779300C9AAC9 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F56A625C1779300C9AAC9 /* NotificationController.swift */; };
+		9D2F56AD25C1779300C9AAC9 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F56A725C1779300C9AAC9 /* ComplicationController.swift */; };
+		9D2F56AF25C1779300C9AAC9 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F56A925C1779300C9AAC9 /* NotificationView.swift */; };
+		9D2F56B025C1779300C9AAC9 /* EpisodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F56AA25C1779300C9AAC9 /* EpisodesView.swift */; };
+		9D2F56B725C177A900C9AAC9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D2F56B625C177A900C9AAC9 /* Preview Assets.xcassets */; };
+		9D2F56C325C1784200C9AAC9 /* EpisodesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F56C225C1784200C9AAC9 /* EpisodesViewModel.swift */; };
+		9D2F56C925C17AE200C9AAC9 /* RickAndMortyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCF79BD25BF7D0700518621 /* RickAndMortyService.swift */; };
+		9D2F56CF25C17B0900C9AAC9 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5DB7D925BF66A500D0F463 /* Network.swift */; };
+		9D2F56DE25C17E2500C9AAC9 /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F56DD25C17E2100C9AAC9 /* CharactersView.swift */; };
+		9D2F56E425C17E2800C9AAC9 /* CharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F56DC25C17E2100C9AAC9 /* CharactersViewModel.swift */; };
+		9D2F56EC25C17E4B00C9AAC9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9D2F56EB25C17E4B00C9AAC9 /* Kingfisher */; };
 		9D5DB7A425BF662800D0F463 /* InspiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5DB7A325BF662800D0F463 /* InspiApp.swift */; };
 		9D5DB7A625BF662800D0F463 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5DB7A525BF662800D0F463 /* ContentView.swift */; };
 		9D5DB7A825BF662900D0F463 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D5DB7A725BF662900D0F463 /* Assets.xcassets */; };
@@ -25,6 +40,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9D2F568125C176CF00C9AAC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D5DB79825BF662800D0F463 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D2F567E25C176CF00C9AAC9;
+			remoteInfo = "Inspi Watch Extension";
+		};
+		9D2F569525C176D000C9AAC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D5DB79825BF662800D0F463 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D2F567525C176CD00C9AAC9;
+			remoteInfo = "Inspi Watch";
+		};
 		9D5DB7B725BF662900D0F463 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9D5DB79825BF662800D0F463 /* Project object */;
@@ -41,7 +70,46 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9D2F569825C176D000C9AAC9 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				9D2F569725C176D000C9AAC9 /* Inspi Watch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D2F569B25C176D000C9AAC9 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9D2F568025C176CF00C9AAC9 /* Inspi Watch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		9D2F567625C176CD00C9AAC9 /* Inspi Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inspi Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D2F567825C176CF00C9AAC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9D2F567A25C176CF00C9AAC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D2F567F25C176CF00C9AAC9 /* Inspi Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Inspi Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D2F56A525C1779300C9AAC9 /* InspiApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InspiApp.swift; path = "Inspi Watch Extension/InspiApp.swift"; sourceTree = SOURCE_ROOT; };
+		9D2F56A625C1779300C9AAC9 /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationController.swift; path = "Inspi Watch Extension/NotificationController.swift"; sourceTree = SOURCE_ROOT; };
+		9D2F56A725C1779300C9AAC9 /* ComplicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ComplicationController.swift; path = "Inspi Watch Extension/ComplicationController.swift"; sourceTree = SOURCE_ROOT; };
+		9D2F56A825C1779300C9AAC9 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; name = PushNotificationPayload.apns; path = "Inspi Watch Extension/PushNotificationPayload.apns"; sourceTree = SOURCE_ROOT; };
+		9D2F56A925C1779300C9AAC9 /* NotificationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationView.swift; path = "Inspi Watch Extension/NotificationView.swift"; sourceTree = SOURCE_ROOT; };
+		9D2F56AA25C1779300C9AAC9 /* EpisodesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EpisodesView.swift; path = "Inspi Watch Extension/Episodes/EpisodesView.swift"; sourceTree = SOURCE_ROOT; };
+		9D2F56B625C177A900C9AAC9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9D2F56C225C1784200C9AAC9 /* EpisodesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewModel.swift; sourceTree = "<group>"; };
+		9D2F56DC25C17E2100C9AAC9 /* CharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModel.swift; sourceTree = "<group>"; };
+		9D2F56DD25C17E2100C9AAC9 /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
 		9D5DB7A025BF662800D0F463 /* Inspi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Inspi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D5DB7A325BF662800D0F463 /* InspiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspiApp.swift; sourceTree = "<group>"; };
 		9D5DB7A525BF662800D0F463 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +133,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9D2F567C25C176CF00C9AAC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D2F56EC25C17E4B00C9AAC9 /* Kingfisher in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9D5DB79D25BF662800D0F463 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -90,13 +166,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D2F567725C176CD00C9AAC9 /* Inspi Watch */ = {
+			isa = PBXGroup;
+			children = (
+				9D2F567825C176CF00C9AAC9 /* Assets.xcassets */,
+				9D2F567A25C176CF00C9AAC9 /* Info.plist */,
+			);
+			path = "Inspi Watch";
+			sourceTree = "<group>";
+		};
+		9D2F568325C176CF00C9AAC9 /* Inspi Watch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9D2F56D625C17D9100C9AAC9 /* Characters */,
+				9D2F56D525C17D7000C9AAC9 /* Episodes */,
+				9D2F56A725C1779300C9AAC9 /* ComplicationController.swift */,
+				9D2F56A525C1779300C9AAC9 /* InspiApp.swift */,
+				9D2F56A625C1779300C9AAC9 /* NotificationController.swift */,
+				9D2F56A925C1779300C9AAC9 /* NotificationView.swift */,
+				9D2F56A825C1779300C9AAC9 /* PushNotificationPayload.apns */,
+				9D2F569025C176D000C9AAC9 /* Preview Content */,
+			);
+			path = "Inspi Watch Extension";
+			sourceTree = "<group>";
+		};
+		9D2F569025C176D000C9AAC9 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9D2F56B625C177A900C9AAC9 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9D2F56D525C17D7000C9AAC9 /* Episodes */ = {
+			isa = PBXGroup;
+			children = (
+				9D2F56AA25C1779300C9AAC9 /* EpisodesView.swift */,
+				9D2F56C225C1784200C9AAC9 /* EpisodesViewModel.swift */,
+			);
+			path = Episodes;
+			sourceTree = "<group>";
+		};
+		9D2F56D625C17D9100C9AAC9 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				9D2F56DD25C17E2100C9AAC9 /* CharactersView.swift */,
+				9D2F56DC25C17E2100C9AAC9 /* CharactersViewModel.swift */,
+			);
+			path = Characters;
+			sourceTree = "<group>";
+		};
+		9D2F56EA25C17E4B00C9AAC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9D5DB79725BF662800D0F463 = {
 			isa = PBXGroup;
 			children = (
 				9D5DB7A225BF662800D0F463 /* Inspi */,
 				9D5DB7B925BF662900D0F463 /* InspiTests */,
 				9D5DB7C425BF662900D0F463 /* InspiUITests */,
+				9D2F567725C176CD00C9AAC9 /* Inspi Watch */,
+				9D2F568325C176CF00C9AAC9 /* Inspi Watch Extension */,
 				9D5DB7A125BF662800D0F463 /* Products */,
+				9D2F56EA25C17E4B00C9AAC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +242,8 @@
 				9D5DB7A025BF662800D0F463 /* Inspi.app */,
 				9D5DB7B625BF662900D0F463 /* InspiTests.xctest */,
 				9D5DB7C125BF662900D0F463 /* InspiUITests.xctest */,
+				9D2F567625C176CD00C9AAC9 /* Inspi Watch.app */,
+				9D2F567F25C176CF00C9AAC9 /* Inspi Watch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -188,33 +326,70 @@
 		9D5DB7F225BF67C900D0F463 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				9D5DB7F425BF67DB00D0F463 /* Detail */,
-				9D5DB7F325BF67D500D0F463 /* Categories */,
+				9D5DB7F425BF67DB00D0F463 /* Characters */,
+				9D5DB7F325BF67D500D0F463 /* Episodes */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
 		};
-		9D5DB7F325BF67D500D0F463 /* Categories */ = {
+		9D5DB7F325BF67D500D0F463 /* Episodes */ = {
 			isa = PBXGroup;
 			children = (
 				9D5DB7FD25BF680600D0F463 /* EpisodesView.swift */,
 				9D5DB7FC25BF680600D0F463 /* EpisodesViewModel.swift */,
 			);
-			path = Categories;
+			path = Episodes;
 			sourceTree = "<group>";
 		};
-		9D5DB7F425BF67DB00D0F463 /* Detail */ = {
+		9D5DB7F425BF67DB00D0F463 /* Characters */ = {
 			isa = PBXGroup;
 			children = (
 				9D5DB7F525BF67F700D0F463 /* CharactersView.swift */,
 				9DCF79D125BF8EA200518621 /* CharactersViewModel.swift */,
 			);
-			path = Detail;
+			path = Characters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9D2F567525C176CD00C9AAC9 /* Inspi Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D2F569F25C176D000C9AAC9 /* Build configuration list for PBXNativeTarget "Inspi Watch" */;
+			buildPhases = (
+				9D2F567425C176CD00C9AAC9 /* Resources */,
+				9D2F569B25C176D000C9AAC9 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D2F568225C176CF00C9AAC9 /* PBXTargetDependency */,
+			);
+			name = "Inspi Watch";
+			productName = "Inspi Watch";
+			productReference = 9D2F567625C176CD00C9AAC9 /* Inspi Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		9D2F567E25C176CF00C9AAC9 /* Inspi Watch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D2F569E25C176D000C9AAC9 /* Build configuration list for PBXNativeTarget "Inspi Watch Extension" */;
+			buildPhases = (
+				9D2F567B25C176CF00C9AAC9 /* Sources */,
+				9D2F567C25C176CF00C9AAC9 /* Frameworks */,
+				9D2F567D25C176CF00C9AAC9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Inspi Watch Extension";
+			packageProductDependencies = (
+				9D2F56EB25C17E4B00C9AAC9 /* Kingfisher */,
+			);
+			productName = "Inspi Watch Extension";
+			productReference = 9D2F567F25C176CF00C9AAC9 /* Inspi Watch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		9D5DB79F25BF662800D0F463 /* Inspi */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D5DB7CA25BF662900D0F463 /* Build configuration list for PBXNativeTarget "Inspi" */;
@@ -222,10 +397,12 @@
 				9D5DB79C25BF662800D0F463 /* Sources */,
 				9D5DB79D25BF662800D0F463 /* Frameworks */,
 				9D5DB79E25BF662800D0F463 /* Resources */,
+				9D2F569825C176D000C9AAC9 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9D2F569625C176D000C9AAC9 /* PBXTargetDependency */,
 			);
 			name = Inspi;
 			packageProductDependencies = (
@@ -280,6 +457,13 @@
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
+					9D2F567525C176CD00C9AAC9 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					9D2F567E25C176CF00C9AAC9 = {
+						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
+					};
 					9D5DB79F25BF662800D0F463 = {
 						CreatedOnToolsVersion = 12.3;
 					};
@@ -312,11 +496,29 @@
 				9D5DB79F25BF662800D0F463 /* Inspi */,
 				9D5DB7B525BF662900D0F463 /* InspiTests */,
 				9D5DB7C025BF662900D0F463 /* InspiUITests */,
+				9D2F567525C176CD00C9AAC9 /* Inspi Watch */,
+				9D2F567E25C176CF00C9AAC9 /* Inspi Watch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9D2F567425C176CD00C9AAC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D2F567925C176CF00C9AAC9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D2F567D25C176CF00C9AAC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D2F56B725C177A900C9AAC9 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9D5DB79E25BF662800D0F463 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -343,6 +545,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9D2F567B25C176CF00C9AAC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D2F56AC25C1779300C9AAC9 /* NotificationController.swift in Sources */,
+				9D2F56B025C1779300C9AAC9 /* EpisodesView.swift in Sources */,
+				9D2F56CF25C17B0900C9AAC9 /* Network.swift in Sources */,
+				9D2F56C325C1784200C9AAC9 /* EpisodesViewModel.swift in Sources */,
+				9D2F56E425C17E2800C9AAC9 /* CharactersViewModel.swift in Sources */,
+				9D2F56C925C17AE200C9AAC9 /* RickAndMortyService.swift in Sources */,
+				9D2F56DE25C17E2500C9AAC9 /* CharactersView.swift in Sources */,
+				9D2F56AB25C1779300C9AAC9 /* InspiApp.swift in Sources */,
+				9D2F56AD25C1779300C9AAC9 /* ComplicationController.swift in Sources */,
+				9D2F56AF25C1779300C9AAC9 /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9D5DB79C25BF662800D0F463 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -379,6 +598,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9D2F568225C176CF00C9AAC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D2F567E25C176CF00C9AAC9 /* Inspi Watch Extension */;
+			targetProxy = 9D2F568125C176CF00C9AAC9 /* PBXContainerItemProxy */;
+		};
+		9D2F569625C176D000C9AAC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D2F567525C176CD00C9AAC9 /* Inspi Watch */;
+			targetProxy = 9D2F569525C176D000C9AAC9 /* PBXContainerItemProxy */;
+		};
 		9D5DB7B825BF662900D0F463 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9D5DB79F25BF662800D0F463 /* Inspi */;
@@ -392,6 +621,97 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		9D2F569925C176D000C9AAC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6675NKW34G;
+				IBSC_MODULE = Inspi_Watch_Extension;
+				INFOPLIST_FILE = "Inspi Watch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = awesome.app.Inspi.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		9D2F569A25C176D000C9AAC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6675NKW34G;
+				IBSC_MODULE = Inspi_Watch_Extension;
+				INFOPLIST_FILE = "Inspi Watch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = awesome.app.Inspi.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		9D2F569C25C176D000C9AAC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Inspi Watch Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 6675NKW34G;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Inspi Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = awesome.app.Inspi.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		9D2F569D25C176D000C9AAC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Inspi Watch Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 6675NKW34G;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Inspi Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = awesome.app.Inspi.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
 		9D5DB7C825BF662900D0F463 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -639,6 +959,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9D2F569E25C176D000C9AAC9 /* Build configuration list for PBXNativeTarget "Inspi Watch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D2F569C25C176D000C9AAC9 /* Debug */,
+				9D2F569D25C176D000C9AAC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D2F569F25C176D000C9AAC9 /* Build configuration list for PBXNativeTarget "Inspi Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D2F569925C176D000C9AAC9 /* Debug */,
+				9D2F569A25C176D000C9AAC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9D5DB79B25BF662800D0F463 /* Build configuration list for PBXProject "Inspi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -689,6 +1027,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9D2F56EB25C17E4B00C9AAC9 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DCF79D625C01BF000518621 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		9DCF79D725C01BF000518621 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9DCF79D625C01BF000518621 /* XCRemoteSwiftPackageReference "Kingfisher" */;
