@@ -13,6 +13,8 @@ final class EpisodesViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     @Published var episodes = [EpisodeCellViewModel]()
     @Published var navigationTitle = "Episodes"
+    private var nextPageURL: String?
+    var hasMore: Bool { nextPageURL != nil }
     
     func load() {
         service.fetchEpisode()
@@ -27,6 +29,28 @@ final class EpisodesViewModel: ObservableObject {
             }, receiveValue: { [weak self] data in
                 self?.episodes = data.results.map(EpisodeCellViewModel.init)
                 self?.navigationTitle = "Episodes (\(data.info.count))"
+                self?.nextPageURL = data.info.next
+                #if DEBUG
+                print(data)
+                #endif
+            })
+            .store(in: &cancellables)
+    }
+    
+    func loadMore() {
+        guard let nextPageURL = nextPageURL else { return }
+        service.fetchEpisode(url: nextPageURL)
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { value in
+                switch value {
+                case .failure(let error):
+                    print(error)
+                case .finished:
+                    break
+                }
+            }, receiveValue: { [weak self] data in
+                self?.episodes.append(contentsOf: data.results.map(EpisodeCellViewModel.init))
+                self?.nextPageURL = data.info.next
                 #if DEBUG
                 print(data)
                 #endif

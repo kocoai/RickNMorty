@@ -17,8 +17,9 @@ struct RickAndMortyService {
         return decoder
     }
     
-    func fetchEpisode() -> AnyPublisher<EpisodeResponse, Error> {
-        restClient.get(url: "\(baseURL)/episode", decoder: decoder, type: EpisodeResponse.self)
+    func fetchEpisode(url: String? = nil) -> AnyPublisher<EpisodeResponse, Error> {
+        guard let url = url else { return restClient.get(url: "\(baseURL)/episode", decoder: decoder, type: EpisodeResponse.self) }
+        return restClient.get(url: url, decoder: decoder, type: EpisodeResponse.self)
     }
     
     func fetchCharacter(id: String) -> AnyPublisher<Character, Error> {

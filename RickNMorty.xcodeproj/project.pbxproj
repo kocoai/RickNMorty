@@ -178,13 +178,13 @@
 		9D2F568325C176CF00C9AAC9 /* RickNMorty Watch Extension */ = {
 			isa = PBXGroup;
 			children = (
+				9D2F56D525C17D7000C9AAC9 /* Episodes */,
+				9D2F56D625C17D9100C9AAC9 /* Characters */,
 				9D0EB98C25C313AB004E6165 /* PushNotificationPayload.apns */,
 				9D0EB98225C313A1004E6165 /* ComplicationController.swift */,
 				9D0EB98125C313A1004E6165 /* InspiApp.swift */,
 				9D0EB97F25C313A1004E6165 /* NotificationController.swift */,
 				9D0EB98025C313A1004E6165 /* NotificationView.swift */,
-				9D2F56D625C17D9100C9AAC9 /* Characters */,
-				9D2F56D525C17D7000C9AAC9 /* Episodes */,
 				9D2F569025C176D000C9AAC9 /* Preview Content */,
 			);
 			path = "RickNMorty Watch Extension";

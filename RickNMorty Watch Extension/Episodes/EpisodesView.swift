@@ -14,6 +14,11 @@ struct EpisodesView: View {
     var body: some View {
         ScrollView {
             ForEach(viewModel.episodes, content: EpisodeCell.init)
+            if viewModel.hasMore {
+                Button("More...") {
+                    viewModel.loadMore()
+                }
+            }
         }
         .padding(.horizontal)
         .onAppear {

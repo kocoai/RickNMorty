@@ -16,6 +16,11 @@ struct EpisodesView: View {
             LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 15), count: 2), spacing: 15) {
                 ForEach(viewModel.episodes, content: EpisodeCell.init)
             }
+            if viewModel.hasMore {
+                Button("More...") {
+                    viewModel.loadMore()
+                }
+            }
         }
         .padding(.horizontal)
         .navigationTitle(viewModel.navigationTitle)
@@ -34,7 +39,7 @@ struct EpisodeCell: View {
     var body: some View {
         NavigationLink(destination: CharactersView(episode: viewModel)) {
             ZStack {
-                Color.gray
+                Color.red
                 VStack {
                     Text("\(viewModel.id)")
                         .font(.largeTitle)
@@ -55,6 +60,7 @@ struct EpisodeCell: View {
                         HStack {
                             Spacer()
                             Image(systemName: "heart.fill")
+                                .foregroundColor(.white)
                         }
                         Spacer()
                     }
