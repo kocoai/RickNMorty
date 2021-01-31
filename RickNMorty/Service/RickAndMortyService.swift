@@ -56,5 +56,10 @@ struct RickAndMortyService {
         let species: String
         let gender: String
         let image: String
+        let location: Location
+        
+        struct Location: Decodable {
+            let name: String
+        }
     }
 }

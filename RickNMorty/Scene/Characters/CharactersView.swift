@@ -34,13 +34,22 @@ struct CharacterCell: View {
     var body: some View {
         VStack {
             KFImage.url(URL(string: viewModel.imageURL))
+                .cornerRadius(20.0)
             VStack {
                 Text(viewModel.name)
                     .font(.title)
                     .multilineTextAlignment(.center)
+                HStack {
+                    Text("●").foregroundColor(viewModel.statusColor)
+                    Text("\(viewModel.status.capitalized) - \(viewModel.species)")
+                }
                 Text("Gender: \(viewModel.gender)")
-                Text("Species: \(viewModel.species)")
-                Text("Status: \(viewModel.status)")
+                if viewModel.location != "unknown" {
+                    Text("Last known location:")
+                    Text("\(viewModel.location)")
+                        .multilineTextAlignment(.center)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
             }
             Spacer(minLength: 40)
         }
