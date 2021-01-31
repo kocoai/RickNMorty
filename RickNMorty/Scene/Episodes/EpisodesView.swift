@@ -20,6 +20,7 @@ struct EpisodesView: View {
                 Button("More...") {
                     viewModel.loadMore()
                 }
+                .foregroundColor(.white)
             }
         }
         .padding(.horizontal)
